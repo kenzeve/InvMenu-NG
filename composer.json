@@ -1,0 +1,23 @@
+{
+  "name": "muqsit/invmenu-ng",
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@github.com:NetherGamesMC/PocketMine-MP.git"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@github.com:NetherGamesMC/BedrockProtocol.git"
+    },
+    {
+      "type": "vcs",
+      "url":  "git@github.com:NetherGamesMC/BedrockData.git"
+    }
+  ],
+  "require-dev": {
+    "pocketmine/pocketmine-mp": "dev-stable"
+  }
+}
