@@ -3,6 +3,11 @@
   "type": "project",
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "muqsit\\invmenu\\": "src/muqsit/invmenu"
+    }
+  },
   "repositories": [
     {
       "type": "vcs",
