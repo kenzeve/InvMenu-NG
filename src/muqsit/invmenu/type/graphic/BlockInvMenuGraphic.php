@@ -29,7 +29,7 @@ final class BlockInvMenuGraphic implements PositionedInvMenuGraphic{
 	}
 
 	public function send(Player $player, ?string $name) : void{
-		$player->getNetworkSession()->sendDataPacket(UpdateBlockPacket::create(BlockPosition::fromVector3($this->position), RuntimeBlockMapping::getInstance()->toRuntimeId($this->block->getFullId()), UpdateBlockPacket::FLAG_NETWORK, UpdateBlockPacket::DATA_LAYER_NORMAL));
+		$player->getNetworkSession()->sendDataPacket(UpdateBlockPacket::create(BlockPosition::fromVector3($this->position), RuntimeBlockMapping::getInstance()->toRuntimeId($this->block->getFullId(), $player->getNetworkSession()->getProtocolId()), UpdateBlockPacket::FLAG_NETWORK, UpdateBlockPacket::DATA_LAYER_NORMAL));
 	}
 
 	public function sendInventory(Player $player, Inventory $inventory) : bool{
